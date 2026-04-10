@@ -13,13 +13,8 @@ pipeline {
                 git url: 'https://github.com/PoojaBusa09/hello-devops-java.git', branch: 'main'
             }
         }
-        stage('Test Docker') {
-    steps {
-        sh 'docker --version'
-    }
-}
 
-        stage('Test Docker') {
+        stage('Verify Docker') {
             steps {
                 bat 'docker --version'
             }
@@ -35,7 +30,7 @@ pipeline {
             steps {
                 bat '''
                 docker rm -f %CONTAINER_NAME% || echo container not found
-                docker run --name %CONTAINER_NAME% %IMAGE_NAME%
+                docker run -d -p 8080:8080 --name %CONTAINER_NAME% %IMAGE_NAME%
                 '''
             }
         }
