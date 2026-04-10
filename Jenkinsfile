@@ -13,6 +13,11 @@ pipeline {
                 git url: 'https://github.com/PoojaBusa09/hello-devops-java.git', branch: 'main'
             }
         }
+        stage('Test Docker') {
+    steps {
+        sh 'docker --version'
+    }
+}
 
         stage('Build Docker Image') {
             steps {
