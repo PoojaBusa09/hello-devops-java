@@ -96,4 +96,58 @@ ippudu:
 
 Windows → Downloads lo folder kanipistundi ✅
 
+✅ 🏷️ 1. Job (Item) Name Suggestion
+
+Mee project ki best names 👇
+
+👉 ⭐ Recommended:
+
+hello-devops-pipeline
+
+👉 Alternatives:
+
+java-devops-pipeline
+docker-jenkins-java
+hello-devops-ci-cd
+✅ 🛠️ 2. New Item Create
+Jenkins open chey (browser lo)
+Click 👉 New Item
+
+Name enter chey:
+
+hello-devops-pipeline
+Select 👉 Pipeline
+Click 👉 OK
+✅ ⚙️ 3. Pipeline Configuration
+
+Scroll down → Pipeline section lo:
+
+👉 Definition select chey:
+Pipeline script from SCM
+👉 SCM:
+Git
+👉 Repository URL:
+https://github.com/PoojaBusa09/hello-devops-java.git
+👉 Branch:
+*/main
+👉 Script Path:
+Jenkinsfile
+
+(⚠️ file name exact same undali GitHub lo)
+
+✅ 💾 4. Save
+
+👉 Click Save
+
+✅ 🚀 5. Build Run
+
+👉 Click Build Now
+
+✅ 📊 6. Output Check
+Click build number (e.g., #1)
+Click Console Output
+
+👉 Output lo kanipinchali:
+
+Hello DevOps 🚀
 
