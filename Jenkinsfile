@@ -19,17 +19,23 @@ pipeline {
     }
 }
 
+        stage('Test Docker') {
+            steps {
+                bat 'docker --version'
+            }
+        }
+
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t $IMAGE_NAME .'
+                bat 'docker build -t %IMAGE_NAME% .'
             }
         }
 
         stage('Run Container') {
             steps {
-                sh '''
-                docker rm -f $CONTAINER_NAME || true
-                docker run --name $CONTAINER_NAME $IMAGE_NAME
+                bat '''
+                docker rm -f %CONTAINER_NAME% || echo container not found
+                docker run --name %CONTAINER_NAME% %IMAGE_NAME%
                 '''
             }
         }
